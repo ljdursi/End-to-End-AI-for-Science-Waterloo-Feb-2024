@@ -14,16 +14,17 @@ RUN pip3 install --upgrade nbconvert
 # TO COPY the data 
 COPY workspace/ /workspace/
 
-# This Installs All the Dataset
+<<<<<<< HEAD
 RUN python3 /workspace/python/source_code/dataset_NS.py
-
-
 RUN python3 /workspace/python/source_code/dataset_darcy.py
 
 RUN pip install jupyterlab
 RUN python -m pip install --upgrade pip setuptools wheel
 RUN apt update && apt install ffmpeg -y
+
 RUN pip install --no-cache-dir --no-deps -e git+https://github.com/NVIDIA/modulus-makani.git@v0.1.0#egg=makani  
+
+RUN python3 /workspace/python/source_code/dataset_darcy.py
 
 ## Uncomment this line to run Jupyter notebook by default
 CMD jupyter-lab --no-browser --allow-root --ip=0.0.0.0 --port=8888 --NotebookApp.token="" --notebook-dir=/workspace/python/
