@@ -20,7 +20,6 @@ The content is structured in multiple modules covering the following:
 - Module 2: Data-driven approach to an AI for Scientific application.
   - Lab 1: Solving the Darcy-Flow problem using FNO
   - Lab 2: Solving the Darcy-Flow problem using AFNO
-
   
 ## Tools and frameworks:
 
