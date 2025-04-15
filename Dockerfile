@@ -5,8 +5,9 @@
 # Finally, open http://127.0.0.1:8888/
 
 # Select Base Image 
-FROM nvcr.io/nvidia/modulus/modulus:24.04
-
+FROM nvcr.io/nvidia/physicsnemo/physicsnemo:25.03
+### check python version makani will give error with 3.12
+FROM python:3.10  
 # Install required python packages
 RUN pip3 install gdown ipympl cdsapi
 RUN pip3 install --upgrade nbconvert
