@@ -4,7 +4,6 @@
 
 Bootstrap: docker
 FROM: nvcr.io/nvidia/physicsnemo/physicsnemo:25.03
-FROM:python:3.10  
 
 %environment
 %post
@@ -13,6 +12,9 @@ FROM:python:3.10
 
     python3 /workspace/python/source_code/dataset_NS.py    
     python3 /workspace/python/source_code/dataset_darcy.py    
+    
+    apt update && apt install ffmpeg -y
+    pip install --no-cache-dir --no-deps -e git+https://github.com/NVIDIA/modulus-makani.git@v0.1.0#egg=makani  
     
 %files
     workspace/* /workspace/
