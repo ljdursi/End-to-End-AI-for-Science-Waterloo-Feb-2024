@@ -14,7 +14,6 @@ RUN pip3 install --upgrade nbconvert
 # TO COPY the data 
 COPY workspace/ /workspace/
 
-<<<<<<< HEAD
 RUN python3 /workspace/python/source_code/dataset_NS.py
 RUN python3 /workspace/python/source_code/dataset_darcy.py
 
